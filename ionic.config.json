@@ -1,0 +1,8 @@
+{
+  "name": "Mink",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular",
+  "id": "6be22258"
+}

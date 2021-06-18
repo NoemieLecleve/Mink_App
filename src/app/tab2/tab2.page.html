@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="ion-text-center">
+    <ion-title>
+      Messagerie
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+  </ion-header>
+  <ion-content>
+    <div class="displayTable">
+      <div class="displayTableCell">
+    
+        <div class="authBlock">
+          <h3>S'inscrire</h3>
+
+          <div class="formGroup">
+            <label>Je suis un(e) </label>
+              <select class="form-control">
+                  <option value="particulier">Particulier</option>
+                  <option value="asso">Association</option>     
+              </select>
+          </div>
+          <div class="formGroup">
+            <label>Email </label>
+            <input type="email" class="formControl" placeholder="Email Address" #email required>
+          </div>
+          <div class="formGroup">
+            <label>Nom </label>
+            <input type="nom" class="formControl" placeholder="Nom" #nom required>
+          </div>
+          <div class="formGroup">
+            <label>Prénom </label> 
+            <input type="prenom" class="formControl" placeholder="Prenom" #prenom required>
+          </div>
+    
+          <div class="formGroup">
+            <label>Mot de passe </label> 
+            <input type="password" class="formControl" placeholder="Mot de passe" #password required>
+          </div>
+    
+          <div class="formGroup">
+            <ion-button type="button" color="secondary" class="btn btnPrimary" value="Sign Up" (click)="authService.RegisterUser(email.value, password.value)">
+              S'enregistrer
+            </ion-button>
+          </div>
+    
+          <div class="formGroup">
+            <span class="or"><span class="orInner">Ou</span></span>
+          </div>
+    
+        </div>
+    
+        <div class="redirectToLogin">
+          <span>Vous avez déjà un compte ? <ion-button class="redirect" routerLink="/login">Se connecter</ion-button></span>
+        </div>
+      </div>
+    
+    </div>
+    </ion-content>
+
+  <app-explore-container name=""></app-explore-container>
+</ion-content>
